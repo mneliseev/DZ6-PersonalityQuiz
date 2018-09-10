@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -212,26 +213,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-IT-jGU">
+                                <rect key="frame" x="16" y="546" width="288" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pM1-Ti-bnw" firstAttribute="bottom" secondItem="jZa-IT-jGU" secondAttribute="bottom" constant="20" id="0su-HB-Vcf"/>
                             <constraint firstItem="pM1-Ti-bnw" firstAttribute="trailing" secondItem="ZxI-09-MHO" secondAttribute="trailing" constant="16" id="1hE-tg-2p6"/>
+                            <constraint firstItem="jZa-IT-jGU" firstAttribute="centerX" secondItem="Xbp-LZ-Fsq" secondAttribute="centerX" id="52J-VB-lnD"/>
                             <constraint firstItem="ZxI-09-MHO" firstAttribute="top" secondItem="7jr-y4-m6d" secondAttribute="bottom" constant="16" id="5Ug-Tj-wu7"/>
                             <constraint firstItem="7jr-y4-m6d" firstAttribute="leading" secondItem="pM1-Ti-bnw" secondAttribute="leading" constant="16" id="6uY-hv-g4b"/>
                             <constraint firstItem="8xw-ab-lSR" firstAttribute="centerY" secondItem="Xbp-LZ-Fsq" secondAttribute="centerY" id="AeH-dY-ssU"/>
                             <constraint firstItem="yyf-e5-4dO" firstAttribute="top" secondItem="7jr-y4-m6d" secondAttribute="bottom" constant="16" id="BGw-sP-7xW"/>
                             <constraint firstItem="pM1-Ti-bnw" firstAttribute="trailing" secondItem="yyf-e5-4dO" secondAttribute="trailing" constant="16" id="F6B-OC-0Nq"/>
                             <constraint firstItem="7jr-y4-m6d" firstAttribute="top" secondItem="pM1-Ti-bnw" secondAttribute="top" constant="16" id="FoZ-3y-DwX"/>
+                            <constraint firstItem="jZa-IT-jGU" firstAttribute="leading" secondItem="Xbp-LZ-Fsq" secondAttribute="leadingMargin" id="L31-oY-llc"/>
                             <constraint firstItem="pM1-Ti-bnw" firstAttribute="trailing" secondItem="7jr-y4-m6d" secondAttribute="trailing" constant="16" id="Mpo-MR-dPf"/>
                             <constraint firstItem="pM1-Ti-bnw" firstAttribute="trailing" secondItem="8xw-ab-lSR" secondAttribute="trailing" constant="16" id="QXd-xm-n6o"/>
                             <constraint firstItem="ZxI-09-MHO" firstAttribute="leading" secondItem="pM1-Ti-bnw" secondAttribute="leading" constant="16" id="fdP-k4-aNg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jZa-IT-jGU" secondAttribute="trailing" id="iBV-NK-HD9"/>
                             <constraint firstItem="8xw-ab-lSR" firstAttribute="leading" secondItem="pM1-Ti-bnw" secondAttribute="leading" constant="16" id="jzl-sL-Bcr"/>
                             <constraint firstItem="yyf-e5-4dO" firstAttribute="leading" secondItem="pM1-Ti-bnw" secondAttribute="leading" constant="16" id="upt-KM-pUm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pM1-Ti-bnw"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZxI-09-MHO"/>
+                                <exclude reference="yyf-e5-4dO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="RE1-7m-1Ak"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="Ee3-17-1i5" id="NJo-4E-Lpr"/>
+                        <outlet property="multiLabel2" destination="inC-g2-5Gf" id="gpV-mg-6Ig"/>
+                        <outlet property="multiLabel3" destination="yk4-DD-qhC" id="hW9-QR-e7h"/>
+                        <outlet property="multiLabel4" destination="Q32-P6-coq" id="ATS-j2-yDM"/>
+                        <outlet property="multipleStackVIew" destination="yyf-e5-4dO" id="4uS-6h-yoV"/>
+                        <outlet property="questionLabel" destination="7jr-y4-m6d" id="YbT-qN-bar"/>
+                        <outlet property="questionProgressView" destination="jZa-IT-jGU" id="mg6-qp-2ou"/>
+                        <outlet property="rangedLabel1" destination="X0j-4d-Ltx" id="ULH-em-y7q"/>
+                        <outlet property="rangedLabel2" destination="XYk-RA-Yh1" id="5ZH-i3-kJx"/>
+                        <outlet property="rangedStackView" destination="8xw-ab-lSR" id="BIs-1T-q9f"/>
+                        <outlet property="singleButton1" destination="sGS-hA-HxM" id="FVh-N6-9gm"/>
+                        <outlet property="singleButton2" destination="Owb-N5-Cuu" id="6E4-20-hGM"/>
+                        <outlet property="singleButton3" destination="S7N-GN-tvR" id="aB9-A9-M7E"/>
+                        <outlet property="singleButton4" destination="uHT-Cj-fOL" id="ztk-R7-D1c"/>
+                        <outlet property="singleStackView" destination="ZxI-09-MHO" id="ROJ-DN-mkb"/>
                         <segue destination="ybu-to-saB" kind="show" identifier="ResultsSegue" id="kkz-La-vqK"/>
                     </connections>
                 </viewController>
